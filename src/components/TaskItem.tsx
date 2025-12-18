@@ -63,7 +63,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
         ) : null}
         {task.dueDate && (
           <Text style={styles.taskItemSection.dueDate}>
-            Due: {moment(task.dueDate).format("ddd D MMM YYYY HH:mm")}
+            Due: {moment(task.dueDate?.toString()).format("ddd D MMM YYYY HH:mm")}
           </Text>
         )}
       </View>

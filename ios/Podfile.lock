@@ -32,6 +32,8 @@ PODS:
     - Yoga
   - ExpoAsset (11.1.7):
     - ExpoModulesCore
+  - ExpoFont (14.0.10):
+    - ExpoModulesCore
   - ExpoModulesCore (2.5.0):
     - DoubleConversion
     - glog
@@ -1895,6 +1897,7 @@ DEPENDENCIES:
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - Expo (from `../node_modules/expo`)
   - ExpoAsset (from `../node_modules/expo-asset/ios`)
+  - ExpoFont (from `../node_modules/expo-font/ios`)
   - ExpoModulesCore (from `../node_modules/expo-modules-core`)
   - "ExpoSpeechRecognition (from `../node_modules/@jamsch/expo-speech-recognition/ios`)"
   - fast_float (from `../node_modules/react-native/third-party-podspecs/fast_float.podspec`)
@@ -1987,6 +1990,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo"
   ExpoAsset:
     :path: "../node_modules/expo-asset/ios"
+  ExpoFont:
+    :path: "../node_modules/expo-font/ios"
   ExpoModulesCore:
     :path: "../node_modules/expo-modules-core"
   ExpoSpeechRecognition:
@@ -2143,6 +2148,7 @@ SPEC CHECKSUMS:
   EXConstants: d3d551cb154718f5161c4247304e96aa59f6cca7
   Expo: a9aaba7e05fb1445c5605b2b1be1904efa2aaaff
   ExpoAsset: ef06e880126c375f580d4923fdd1cdf4ee6ee7d6
+  ExpoFont: 35ac6191ed86bbf56b3ebd2d9154eda9fad5b509
   ExpoModulesCore: 00a1b5c73248465bd0b93f59f8538c4573dac579
   ExpoSpeechRecognition: 1be520aff1d1bf8fd584a321ced0d30cde06235a
   fast_float: 06eeec4fe712a76acc9376682e4808b05ce978b6

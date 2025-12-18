@@ -8,11 +8,14 @@ import {
 } from "react-native";
 import ThemeToggle from "./ThemeToggle";
 import useStyles from "../hooks/useStyles";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import Feather from "@expo/vector-icons/Feather";
 import Input from "./ui/Input";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { formatTasksByDueDate } from "../store/tasksSlice";
 import ToggleCheckbox from "./ui/ToggleCheckbox";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import { ThemeContext } from "../context/ThemeContextProvider";
 
 const HeaderSection = ({
   searchText,
@@ -31,6 +34,7 @@ const HeaderSection = ({
   const [showSearchInput, setShowSearchInput] = useState(false);
   const animatedHeight = useRef(new Animated.Value(0)).current;
   const animatedOpacity = useRef(new Animated.Value(0)).current;
+  const { theme } = useContext(ThemeContext);
   const tasks = useAppSelector((state) => state.tasks);
 
   useEffect(() => {
@@ -76,9 +80,18 @@ const HeaderSection = ({
               onPress={() => setShowSearchInput(!showSearchInput)}
               style={styles.headerSectionComponent.addBtn}
             >
-              <Text style={styles.headerSectionComponent.addIcon}>
-                {showSearchInput ? "❌" : "🔎"}
-              </Text>
+              {showSearchInput ? (
+                
+                <AntDesign
+                  name="close"
+                  size={30}
+                  color={theme === "dark" ? "#616161" : "#adadad"}
+                />
+              ) : (
+               <Feather name="search"  size={30}
+                  color={theme === "dark" ? "#616161" : "#adadad"} />
+              )}
+
             </TouchableOpacity>
           )}
         </View>
