@@ -12,25 +12,6 @@ A React Native todo application built with Expo, Redux, and TypeScript. Features
 - 🎨 Custom theming support
 - ✨ Smooth animations and transitions
 
-## Tech Stack
-
-- **React Native** - Mobile framework
-- **Expo** - Development platform
-- **TypeScript** - Type safety
-- **Redux Toolkit** - State management
-- **React Navigation** - Navigation
-- **AsyncStorage** - Local data persistence
-- **Jest & React Native Testing Library** - Testing
-- **Expo Speech Recognition** - Voice input
-
-## Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-- [Node.js](https://nodejs.org/) (v14 or higher)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- [Expo CLI](https://docs.expo.dev/get-started/installation/) (optional, but recommended)
-- [Expo Go app](https://expo.dev/client) on your mobile device (for testing on physical device)
 
 ## Installation
 
@@ -128,58 +109,6 @@ npx jest --clearCache
 npm test
 ```
 
-## Project Structure
-
-```
-todo-app/
-├── src/
-│   ├── components/       # Reusable UI components
-│   │   ├── ui/          # Basic UI components (Button, Input, etc.)
-│   │   ├── TaskItem.tsx
-│   │   ├── EmptyState.tsx
-│   │   └── ...
-│   ├── screens/         # Screen components
-│   │   ├── TaskListScreen.tsx
-│   │   └── AddTaskScreen.tsx
-│   ├── store/           # Redux store and slices
-│   │   ├── index.ts
-│   │   ├── tasksSlice.ts
-│   │   └── hooks.ts
-│   ├── hooks/           # Custom React hooks
-│   │   ├── useDebounce.ts
-│   │   └── useStyles.ts
-│   ├── context/         # React Context providers
-│   │   └── ThemeContextProvider.tsx
-│   ├── utils/           # Utility functions
-│   │   └── taskParser.ts
-│   └── types/           # TypeScript type definitions
-│       └── index.ts
-├── __tests__/           # Test files
-├── App.tsx              # Root component
-├── package.json
-├── tsconfig.json
-├── jest.config.js       # Jest configuration
-└── babel.config.js      # Babel configuration
-```
-
-## Testing Structure
-
-Tests are organized alongside their source files:
-
-```
-src/
-├── components/
-│   └── ui/
-│       ├── Input.tsx
-│       └── Input.test.js
-├── hooks/
-│   ├── useDebounce.ts
-│   └── useDebounce.test.js
-└── screens/
-    ├── TaskListScreen.tsx
-    └── TaskListScreen.test.js
-```
-
 ## Available Scripts
 
 - `npm start` - Start the Expo development server
@@ -190,16 +119,3 @@ src/
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Generate test coverage report
 
-## Troubleshooting
-
-### Jest/Testing Issues
-
-**Problem: Tests failing with "Unexpected token 'export'"**
-
-Solution: Clear Jest cache and reinstall dependencies
-
-```bash
-npx jest --clearCache
-rm -rf node_modules
-npm install
-```
