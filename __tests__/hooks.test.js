@@ -23,14 +23,11 @@ describe("useDebounce hook", () => {
       <TestComponent value={value} delay={500} />
     );
 
-    // Change value
     value = "second";
     rerender(<TestComponent value={value} delay={500} />);
 
-    // Still old value before delay
     expect(getByTestId("debounced-value").props.children).toBe("first");
 
-    // Advance timers
     act(() => {
       jest.advanceTimersByTime(500);
     });

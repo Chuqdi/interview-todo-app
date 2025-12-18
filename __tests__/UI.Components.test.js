@@ -3,7 +3,6 @@ import Button from "../src/components/ui/Button";
 import Input from "../src/components/ui/Input";
 
 describe("components-test", () => {
-  //BUTTON Tests
   it("test button title", () => {
     const { getByText } = render(<Button title="Button Title" />);
     expect(getByText("Button Title")).toBeTruthy();
@@ -19,7 +18,6 @@ describe("components-test", () => {
     expect(onPressMock).toHaveBeenCalledTimes(1);
   });
 
-  //INPUT Tests
   it("should render with default props", () => {
     const { getByPlaceholderText } = render(<Input placeholder="Enter text" />);
 
