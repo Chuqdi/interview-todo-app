@@ -190,7 +190,7 @@ const TaskListScreen: React.FC<Props> = ({ navigation }) => {
   if (loading) {
     return (
       <View style={styles.taskListScreen.loadingContainer}>
-        <ActivityIndicator size="large" color={theme.colors.primary} />
+        <ActivityIndicator testID="activity-indicator" size="large" color={theme.colors.primary} />
       </View>
     );
   }

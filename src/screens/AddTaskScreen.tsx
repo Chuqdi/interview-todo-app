@@ -18,6 +18,7 @@ import { ThemeContext } from "../context/ThemeContextProvider";
 import useStyles from "../hooks/useStyles";
 import Input from "../components/ui/Input";
 import moment from "moment";
+import Button from "../components/ui/Button";
 
 type RootStackParamList = {
   TaskList: undefined;
@@ -129,22 +130,18 @@ const AddTaskScreen: React.FC<Props> = ({ navigation }) => {
               minimumDate={new Date()}
             />
           )}
-
-          <TouchableOpacity
-            style={styles.addTaskScreen.addButton}
+          <Button
             onPress={handleAddTask}
+            title="Add Task"
+            variant="primary"
             activeOpacity={0.8}
-          >
-            <Text style={styles.addTaskScreen.addButtonText}>Add Task</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.addTaskScreen.cancelButton}
+          />
+          <Button
             onPress={() => navigation.goBack()}
+            title="Cancel"
+            variant="secondary"
             activeOpacity={0.8}
-          >
-            <Text style={styles.addTaskScreen.cancelButtonText}>Cancel</Text>
-          </TouchableOpacity>
+          />
         </View>
       </ScrollView>
     </KeyboardAvoidingView>

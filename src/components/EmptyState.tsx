@@ -9,7 +9,7 @@ const EmptyState: React.FC = () => {
   const styles = useStyles();
 
   return (
-    <View style={styles.emptyTasksComponent.container}>
+    <View testID="empty-state" style={styles.emptyTasksComponent.container}>
       <Text style={styles.emptyTasksComponent.emoji}>📝</Text>
       <Text style={styles.emptyTasksComponent.title}>No tasks yet</Text>
       <Text style={styles.emptyTasksComponent.subtitle}>
